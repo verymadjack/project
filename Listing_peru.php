@@ -24,9 +24,9 @@ session_start();
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="register/index.html">Sign Up</a></li>
-											<li><a href="Login_v2/index.html">Log In</a></li>
+											<li><a href="index.php">Home</a></li>
+											<li><a href="register/index.php">Sign Up</a></li>
+											<li><a href="Login_v2/index.php">Log In</a></li>
 										</ul>
 									</div>
 								</li>
@@ -103,7 +103,8 @@ session_start();
 											</div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" value="Checkout" class="primary" /></li>
+													<label for = "bookingerr"><?php echo isset($_SESSION['bookingerr']) ? $_SESSION['bookingerr'] : ''; ?></label>
+													<li><input name= "bookingerr" type="submit" value="Checkout" class="primary" /></li>
 													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>
@@ -137,13 +138,8 @@ session_start();
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script><div id="menu">
-										<ul>
-											<li><a href="index.html" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Home</a></li>
-											<li><a href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Sign Up</a></li>
-											<li><a href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Log In</a></li>
-										</ul>
-									<a href="#menu" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a></div>
+			<script src="assets/js/main.js"></script>
+									
 
 	
 </body>
