@@ -28,6 +28,7 @@ session_start();
 											<li><a href="index.html">Home</a></li>
 											<li><a href="register/index.php">Sign Up</a></li>
 											<li><a href="Login_v2/index.php">Log In</a></li>
+											<li><a href="logout.php">Log out</a></li>
 										</ul>
 									</div>
 								</li>
