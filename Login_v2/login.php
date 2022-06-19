@@ -30,12 +30,20 @@ $user = $stmt->fetch();
 
 if ($user) {
     unset($_SESSION['login_error']); 
-    $isLoggedIn = True;
+    $stmt = $pdo->prepare("SELECT id FROM user WHERE email=? AND `password`=?");
+    $stmt->execute(array($emailAddressLogin, $passLogin));
+    $user = $stmt->fetch();
+    
+    $_SESSION['userLoggedIn'] = $user;
+    unset($_SESSION['bookingerr']);
+    //die(var_dump($_SESSION['userLoggedIn']));
+    header("Location: http://travel.local/");
 } else {
     $_SESSION['login_error'] = "User doesn't exist";
     header("Location: http://travel.local/Login_v2/index.php");
 }
 //die(var_dump($_POST['password']));
-/* die(var_dump($user)); */
 
-header("Location: http://travel.local/");
+//die(var_dump($user)); 
+
+//header("Location: http://travel.local/");
